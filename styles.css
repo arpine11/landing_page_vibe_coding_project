@@ -1,0 +1,399 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a2e;
+  line-height: 1.6;
+  background: #fdfdfd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 16px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4361ee;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  font-size: 0.95rem;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #4361ee;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: #4361ee;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #3651d4;
+}
+
+.btn-outline {
+  border-color: #4361ee;
+  color: #4361ee;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #4361ee;
+  color: #fff;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8f9ff 100%);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* ===== Features / Cards ===== */
+.features {
+  padding: 80px 20px;
+}
+
+.features h2,
+.benefits h2,
+.testimonials h2,
+.pricing h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 48px;
+  color: #1a1a2e;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ===== Benefits ===== */
+.benefits {
+  padding: 80px 20px;
+  background: #f7f8fc;
+}
+
+.benefits-list {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.benefits-list strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.benefits-list p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ===== Testimonials ===== */
+.testimonials {
+  padding: 80px 20px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.testimonial p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.testimonial footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial footer strong {
+  font-size: 0.95rem;
+}
+
+.testimonial footer span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* ===== Pricing ===== */
+.pricing {
+  padding: 80px 20px;
+  background: #f7f8fc;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.pricing-card.featured {
+  border-color: #4361ee;
+  box-shadow: 0 4px 24px rgba(67, 97, 238, 0.15);
+  position: relative;
+}
+
+.pricing-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #4361ee;
+  margin-bottom: 24px;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.pricing-card ul {
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.pricing-card li {
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pricing-card li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #1a1a2e;
+  color: #ccc;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand .logo {
+  color: #fff;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav {
+    gap: 14px;
+  }
+
+  .nav a {
+    font-size: 0.85rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 60px 16px 50px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
