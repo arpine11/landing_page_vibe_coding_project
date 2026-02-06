@@ -96,6 +96,51 @@
       </div>
     </section>
 
+    <!-- Product Gallery -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <h2>Product Gallery</h2>
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ui">UI</button>
+          <button class="filter-btn" data-filter="api">API</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="ui">
+            <div class="gallery-placeholder" style="background:#4361ee;">
+              <span>Dashboard View</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="api">
+            <div class="gallery-placeholder" style="background:#2ec4b6;">
+              <span>API Explorer</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="mobile">
+            <div class="gallery-placeholder" style="background:#e63946;">
+              <span>Mobile Alerts</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="ui">
+            <div class="gallery-placeholder" style="background:#457b9d;">
+              <span>Metrics Panel</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="api">
+            <div class="gallery-placeholder" style="background:#f4a261;">
+              <span>Webhook Config</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="mobile">
+            <div class="gallery-placeholder" style="background:#6c5ce7;">
+              <span>Mobile Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
       <div class="container">
@@ -189,6 +234,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-content" id="lightbox-content"></div>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+  </div>
 
   <script src="app.js"></script>
 </body>
