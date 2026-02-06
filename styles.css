@@ -44,6 +44,14 @@ img {
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
   padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.2s;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .header .container {
@@ -69,8 +77,13 @@ img {
   transition: color 0.2s;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
   color: #4361ee;
+}
+
+.nav a.active {
+  font-weight: 600;
 }
 
 /* ===== Buttons ===== */
