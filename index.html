@@ -190,6 +190,28 @@
     </div>
   </footer>
 
+  <!-- CTA Modal -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" id="cta-modal">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <h2>Get Started with CloudPulse</h2>
+      <p>Enter your details and we'll set up your free account.</p>
+      <form id="cta-form" novalidate>
+        <div class="form-group">
+          <label for="user-name">Name</label>
+          <input type="text" id="user-name" name="name" placeholder="Your name" required>
+          <span class="error-msg" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="user-email">Email</label>
+          <input type="email" id="user-email" name="email" placeholder="you@company.com" required>
+          <span class="error-msg" id="email-error"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Sign Up Free</button>
+      </form>
+    </div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>

@@ -41,4 +41,42 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ===== CTA Modal =====
+  const ctaButton = document.getElementById('cta-button');
+  const backdrop = document.getElementById('modal-backdrop');
+  const modal = document.getElementById('cta-modal');
+  const closeBtn = document.getElementById('modal-close');
+
+  function openModal() {
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  ctaButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  // Close with close button
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close by clicking backdrop
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) {
+      closeModal();
+    }
+  });
+
+  // Close with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && backdrop.classList.contains('open')) {
+      closeModal();
+    }
+  });
 });
