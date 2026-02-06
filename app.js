@@ -79,4 +79,51 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
+
+  // ===== Form Validation =====
+  const form = document.getElementById('cta-form');
+  const nameInput = document.getElementById('user-name');
+  const emailInput = document.getElementById('user-email');
+  const nameError = document.getElementById('name-error');
+  const emailError = document.getElementById('email-error');
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function clearErrors() {
+    nameError.textContent = '';
+    emailError.textContent = '';
+    nameInput.classList.remove('invalid');
+    emailInput.classList.remove('invalid');
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    clearErrors();
+
+    let valid = true;
+
+    if (!nameInput.value.trim()) {
+      nameError.textContent = 'Name is required.';
+      nameInput.classList.add('invalid');
+      valid = false;
+    }
+
+    if (!emailInput.value.trim()) {
+      emailError.textContent = 'Email is required.';
+      emailInput.classList.add('invalid');
+      valid = false;
+    } else if (!validateEmail(emailInput.value.trim())) {
+      emailError.textContent = 'Please enter a valid email address.';
+      emailInput.classList.add('invalid');
+      valid = false;
+    }
+
+    if (valid) {
+      alert('Thanks for signing up, ' + nameInput.value.trim() + '!');
+      form.reset();
+      closeModal();
+    }
+  });
 });
