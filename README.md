@@ -2,6 +2,8 @@
 
 A modern landing page for CloudPulse, an infrastructure monitoring SaaS product.
 
+**Live Demo:** https://arpine11.github.io/landing_page_vibe_coding_project/
+
 ## Features
 
 ### v1 — Core Landing Page
